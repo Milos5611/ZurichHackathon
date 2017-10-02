@@ -8,6 +8,8 @@
 @import "component/public/login/index";
 // LoadingSpinner
 @import "component/widget/loadingSpinner/index";
+// Templates
+@import "component/view/Templates/index.scss";
 
 body {
     background: rgba(175, 198, 218, 0.2);

@@ -1,4 +1,5 @@
 export const HOME = "/";
+export const REGISTRATION = "/registration";
 export const TEMPLATES = "/templates";
 export const SURVEYS = "/surveys";
 export const SURVEY_RUNNER = "/surveyRunner";

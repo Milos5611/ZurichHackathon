@@ -1,5 +1,6 @@
 import { Cookies, withCookies } from "react-cookie";
 import Checkbox from "material-ui/Checkbox";
+import { Link } from "react-router-dom";
 import Paper from "material-ui/Paper";
 import PropTypes from "prop-types";
 import { PureComponent } from "react";
@@ -83,9 +84,8 @@ class Login extends PureComponent {
 
     render() {
         const { showPassword, username, password, userIsLoggedIn } = this.props;
-        return (
-            !userIsLoggedIn ? (
-                <div>
+        return (!userIsLoggedIn ?
+                (<div>
                     <div className="login--background__wrapper"/>
                     <div className="login--header">
                         <Paper
@@ -131,9 +131,17 @@ class Login extends PureComponent {
                                 labelColor="#fff"
                                 icon={<VerifiedUser/>}
                             />
+                            <p
+                                style={{ display: "inline-block" }}
+                            >{"Not a member yet ? "}
+                                <Link
+                                    to={"/registration"}
+                                >{"Submit request"}
+                                </Link>
+                            </p>
                         </Paper>
                     </div>
-                </div> ) :
+                </div>) :
                 <Redirect
                     to="/templates"
                 />

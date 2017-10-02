@@ -1,5 +1,6 @@
 import {
-    TEMPLATES
+    TEMPLATES,
+    getAllTemplates
 } from "../services/template";
 import Templates from "../component/view/Templates/Templates";
 import { bindActionCreators } from "redux";
@@ -12,7 +13,7 @@ const mapStateToProps = ( state ) => {
 };
 
 const mapDispatchToProps = ( dispatch ) => {
-    return bindActionCreators({}, dispatch);
+    return bindActionCreators({ getAllTemplates }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Templates);

@@ -45,7 +45,6 @@ const MainApplication = () => {
                                 path={ROUTES.HOME}
                                 component={Login}
                             />
-
                         </Switch>
                         <Route component={Notification}/>
                     </div>
