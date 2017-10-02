@@ -1,0 +1,23 @@
+// Style helpers
+@import "style-helpers/font-face";
+@import "style-helpers/variables";
+@import "style-helpers/mixins";
+@import "style-helpers/path";
+@import "style-helpers/typografy";
+// Login
+@import "component/public/login/index";
+// LoadingSpinner
+@import "component/widget/loadingSpinner/index";
+// Footer
+@import "component/layout/footer/index";
+// Header
+@import "component/layout/header/index";
+// Language Selection
+@import "component/widget/languageSelection/index";
+
+@import "component/view/surveyInstanceList/index";
+
+body {
+    background: rgba(175, 198, 218, 0.2);
+    font-family: Roboto, sans-serif;
+}
