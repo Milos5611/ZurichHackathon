@@ -43,8 +43,7 @@ class Login extends PureComponent {
         password: PropTypes.string,
         showPassword: PropTypes.bool,
         userIsLoggedIn: PropTypes.bool,
-        cookies: PropTypes.instanceOf(Cookies).isRequired,
-        checkCookieLogin: PropTypes.func.isRequired
+        cookies: PropTypes.instanceOf(Cookies).isRequired
     };
 
     constructor( props ) {
@@ -54,10 +53,6 @@ class Login extends PureComponent {
         this.handlePasswordChanged = ::this.handlePasswordChanged;
         this.handleCheckForKeyEventLogin = ::this.handleCheckForKeyEventLogin;
         this.handleLogin = :: this.handleLogin;
-    }
-
-    componentWillMount() {
-        this.props.checkCookieLogin(this.props.cookies);
     }
 
     handleShowHide() {
@@ -140,7 +135,7 @@ class Login extends PureComponent {
                     </div>
                 </div> ) :
                 <Redirect
-                    to="/surveys"
+                    to="/templates"
                 />
         );
     }

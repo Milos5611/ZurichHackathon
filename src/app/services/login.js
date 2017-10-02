@@ -1,6 +1,4 @@
-import { createErrorMessages, messagesReceived } from "./message";
 import { TYPE_KEY } from "../common/constant";
-import rest from "../common/rest";
 import { showNotification } from "./notification";
 
 const LOGIN_SUCCESSFUL_ACTION = "LOGIN_SUCCESSFUL";
@@ -8,10 +6,7 @@ const CHANGE_USERNAME = "CHANGE_USERNAME";
 const CHANGE_PASSWORD = "CHANGE_PASSWORD";
 const LOGIN_FAILED_ACTION = "LOGIN_FAILED_ACTION";
 const SHOW_HIDE_PASSWORD_ACTION = "SHOW_HIDE_PASSWORD_ACTION";
-const LOGIN_COOKIE_AVAILABLE = "LOGIN_COOKIE_AVAILABLE";
 const LOGOUT = "LOGOUT";
-
-export const COOKIE_LOGIN = "mlSolution";
 
 export const IS_LOGGED_IN = "userIsLoggedIn";
 export const USERNAME = "username";
@@ -83,37 +78,19 @@ export default function reducer( state = initialState, action ) {
 }
 
 export function logout() {
-    return {[TYPE_KEY] : LOGOUT};
+    return { [TYPE_KEY]: LOGOUT };
 }
 
-export function checkCookieLogin(cookies) {
-
-    const loginCookies = cookies.get(COOKIE_LOGIN);
-
-    if(loginCookies) {
-        return (dispatch) => {
-            dispatch(loginSuccessful(loginCookies));
-        };
-    }
-
-    return {[TYPE_KEY] : LOGIN_COOKIE_AVAILABLE};
-}
-
-export function doLogin(cookies) {
+export function doLogin() {
     return ( dispatch, getState ) => {
-        rest.doLogin(
-            `${window.com.mainlevel.BASE_URL}/authentication/token`, getState().login[ USERNAME ], getState().login[ PASSWORD ]
-        ).then(currentUser => {
-            if ( currentUser.token ) {
-                cookies.set(COOKIE_LOGIN, {userName : currentUser.userName, token: currentUser.token});
-                dispatch(loginSuccessful(currentUser));
-                dispatch(showNotification("Login succeeded", "X"));
-            }
-        }, reason => {
+        if ( getState().login[ USERNAME ] === "milos.nikolic@gmail.com" && getState().login[ PASSWORD ] === "milos" ) {
+            dispatch(loginSuccessful(getState().login[ USERNAME ], getState().login[ PASSWORD ]));
+            dispatch(showNotification("Login succeeded", "X"));
+        }
+        else {
             dispatch(loginFail());
-            dispatch(messagesReceived(createErrorMessages(reason)));
             dispatch(showNotification("Login failed", "X"));
-        });
+        }
     };
 }
 
@@ -138,11 +115,11 @@ export function showHide( password ) {
     };
 }
 
-export function loginSuccessful( currentUser ) {
+export function loginSuccessful( userName, password ) {
     return {
         [TYPE_KEY]: LOGIN_SUCCESSFUL_ACTION,
-        [USERNAME]: currentUser.userName,
-        [TOKEN]: currentUser.token
+        [USERNAME]: userName,
+        [TOKEN]: password
     };
 }
 

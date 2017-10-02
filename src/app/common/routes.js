@@ -10,4 +10,4 @@ export const surveyInstances = ( surveyGid ) => {
 
 export const DEFAULT_LOGGED_IN = HOME;
 export const DEFAULT_ANONYMOUS = HOME;
-export const DEFAULT_ADMIN = SURVEYS;
+export const DEFAULT_ADMIN = TEMPLATES;

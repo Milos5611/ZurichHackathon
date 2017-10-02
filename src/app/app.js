@@ -3,16 +3,15 @@ import * as ROUTES from "../app/common/routes";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import AnonRoute from "./router/AnonRoute";
 import AuthRoute from "./router/AuthRoute";
-import {CookiesProvider} from "react-cookie";
+import { CookiesProvider } from "react-cookie";
 import Listener from "../listener/listener";
 import LoadingSpinner from "./container/LoadingSpinnerContainer";
-import LocaleProviderContainer from "./component/widget/localeProvider/LocaleProviderContainer";
 import Login from "./container/Login";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import Notification from "./container/Notification";
 import { Provider } from "react-redux";
 import React from "react";
-import SurveyInstanceList from "./container/SurveyInstanceList";
+import Template from "./container/Template";
 import { addLocaleData } from "react-intl";
 import de from "react-intl/locale-data/de";
 import domready from "domready";
@@ -32,28 +31,26 @@ injectTapEventPlugin();
 const MainApplication = () => {
     return (
         <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-            <LocaleProviderContainer store={store}>
-                <Provider store={store}>
-                    <Router>
-                        <div>
-                            <LoadingSpinner/>
-                            <Switch>
-                                <AuthRoute
-                                    exact
-                                    path={ROUTES.SURVEY_INSTANCE_LIST}
-                                    component={SurveyInstanceList}
-                                />
-                                <AnonRoute
-                                    path={ROUTES.HOME}
-                                    component={Login}
-                                />
+            <Provider store={store}>
+                <Router>
+                    <div>
+                        <LoadingSpinner/>
+                        <Switch>
+                            <AuthRoute
+                                exact
+                                path={ROUTES.TEMPLATES}
+                                component={Template}
+                            />
+                            <AnonRoute
+                                path={ROUTES.HOME}
+                                component={Login}
+                            />
 
-                            </Switch>
-                            <Route component={Notification}/>
-                        </div>
-                    </Router>
-                </Provider>
-            </LocaleProviderContainer>
+                        </Switch>
+                        <Route component={Notification}/>
+                    </div>
+                </Router>
+            </Provider>
         </MuiThemeProvider>
     );
 };
