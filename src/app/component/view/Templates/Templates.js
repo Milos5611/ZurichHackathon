@@ -42,7 +42,7 @@ class Templates extends React.Component {
                                             title={card.name}
                                             subtitle={card.name}
                                         />
-                                        <CardText>
+                                        <CardText style={{fontSize:18}}>
                                             {card.description}
                                         </CardText>
                                     </Link>

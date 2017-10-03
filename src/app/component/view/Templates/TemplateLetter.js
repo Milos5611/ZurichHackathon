@@ -38,7 +38,7 @@ class TemplateLetter extends PureComponent {
             <div>
                 <Header/>
                 <div className="details">
-                    <p className="intro-letter">{"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. "}</p>
+                    <p className="intro-letter">{"You gave your apartment back some time ago. There have been no claims but you don't get your deposit back as your landlord is not reacting? Get him sent a professional letter to claim your money back. "}</p>
                     <Paper
                         style={style.paper}
                         zDepth={2}
