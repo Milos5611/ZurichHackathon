@@ -10,8 +10,17 @@
 @import "component/widget/loadingSpinner/index";
 // Templates
 @import "component/view/Templates/index.scss";
+// Header
+@import "component/layout/header/index";
+// Footer
+@import "component/layout/footer/index";
 
 body {
-    background: rgba(175, 198, 218, 0.2);
-    font-family: Roboto, sans-serif;
+  /*background: rgba(175, 198, 218, 0.2);*/
+  background: url("/images/background-web.jpg");
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
+  height: 100vh;
+  font-family: Roboto, sans-serif;
 }

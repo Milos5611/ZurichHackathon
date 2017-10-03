@@ -18,6 +18,13 @@
   align-items: center;
   height: 100vh;
   margin: 20px auto;
+
+  .intro-letter {
+    width: 400px;
+    font-size: 22px;
+    color: #577a9b;
+    font-family: cursive;
+  }
 }
 
 .up-contract {
@@ -31,4 +38,10 @@
     background-color: rgba(153, 153, 153, 02) !important;
     color: white !important;
   }
+}
+
+.add-events--button {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
 }

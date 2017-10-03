@@ -4,22 +4,38 @@
       {
         "id": "0",
         "name": "Send Letter",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. "
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. ",
+        "dateStart": "12/8/2016",
+        "dateEnd": "29/9/2017",
+        "text": "Appartment, BundeStr 12, Belgrade",
+        "comment": "Good cooperation with clients"
       },
       {
         "id": "1",
         "name": "Fast cash out",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. "
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. ",
+        "dateStart": "16/4/2017",
+        "dateEnd": "29/9/2017",
+        "text": "Appartment, Landstarasse 1, Zurch",
+        "comment":""
       },
       {
         "id": "2",
         "name": "Smart contract",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. "
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. ",
+        "dateStart": "20/9/2017",
+        "dateEnd": "29/9/2017",
+        "text": "Car, Mercedses 112, Bern",
+        "comment": "Can't react landlord"
       },
       {
         "id": "3",
         "name": "Go to court",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. "
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. ",
+        "dateStart": "05/2/2017",
+        "dateEnd": "29/9/2017",
+        "text": "Flight, Zurich airport, Zurich",
+        "comment":""
       }
     ]
   }

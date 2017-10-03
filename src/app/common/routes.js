@@ -3,6 +3,7 @@ export const REGISTRATION = "/registration";
 export const TEMPLATES = "/templates";
 export const LETTER = "/templates/:id/letter";
 export const CACHE = "/templates/:id/cache";
+export const CONTRACT = "/templates/:id/contract";
 export const surveyInstances = ( id ) => {
     return "/templates/" + id + "/detail";
 };

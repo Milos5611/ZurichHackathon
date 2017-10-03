@@ -14,6 +14,7 @@ import React from "react";
 import Template from "./container/Template";
 import TemplateCache from "./container/TemplateCache";
 import TemplateLetter from "./container/TemplateLetter";
+import TemplateSMContract from "./container/TemplateSMContract";
 import { addLocaleData } from "react-intl";
 import de from "react-intl/locale-data/de";
 import domready from "domready";
@@ -52,6 +53,11 @@ const MainApplication = () => {
                                 exact
                                 path={ROUTES.CACHE}
                                 component={TemplateCache}
+                            />
+                            <AuthRoute
+                                exact
+                                path={ROUTES.CONTRACT}
+                                component={TemplateSMContract}
                             />
                             <AnonRoute
                                 path={ROUTES.HOME}

@@ -1,4 +1,6 @@
 import { DatePicker } from "material-ui";
+import Footer from "../../layout/footer/Footer";
+import Header from "../../layout/header/Header";
 import Paper from "material-ui/Paper";
 import { PureComponent } from "react";
 import RaisedButton from "material-ui/RaisedButton";
@@ -33,50 +35,54 @@ class TemplateLetter extends PureComponent {
     render() {
 
         return (
-            <div className="details">
-                <Paper
-                    style={style.paper}
-                    zDepth={2}
-                    rounded
-                    className="pisa-login"
-                >
+            <div>
+                <Header/>
+                <div className="details">
+                    <p className="intro-letter">{"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. "}</p>
+                    <Paper
+                        style={style.paper}
+                        zDepth={2}
+                        rounded
+                        className="pisa-login"
+                    >
+                        <TextField
+                            type="text"
+                            floatingLabelText="Email address"
+                            style={style.inputs}
+                        />
+                        <TextField
+                            type="text"
+                            floatingLabelText="Address of tenant"
+                            style={style.inputs}
+                        />
+                        <TextField
+                            type="text"
+                            floatingLabelText="Address of landlord"
+                            style={style.inputs}
+                        />
+                        <TextField
+                            type="text"
+                            floatingLabelText="Place"
+                            style={style.inputs}
+                        />
 
-                    <TextField
-                        type="text"
-                        floatingLabelText="Email address"
-                        style={style.inputs}
-                    />
-                    <TextField
-                        type="text"
-                        floatingLabelText="Address of tenant"
-                        style={style.inputs}
-                    />
-                    <TextField
-                        type="text"
-                        floatingLabelText="Address of landlord"
-                        style={style.inputs}
-                    />
-                    <TextField
-                        type="text"
-                        floatingLabelText="Place"
-                        style={style.inputs}
-                    />
+                        <DatePicker
+                            hintText="Date"
+                            floatingLabelText="Date"
+                            fullWidth
+                        />
 
-                    <DatePicker
-                        hintText="Date"
-                        floatingLabelText="Date"
-                        fullWidth
-                    />
-
-                    <RaisedButton
-                        buttonStyle={style.button}
-                        style={{ height: 57, float: "right", marginTop: 10 }}
-                        className="btn-success"
-                        label="Get the letter"
-                        labelColor="#fff"
-                        icon={<VerifiedUser/>}
-                    />
-                </Paper>
+                        <RaisedButton
+                            buttonStyle={style.button}
+                            style={{ height: 57, float: "right", marginTop: 10 }}
+                            className="btn-success"
+                            label="Get the letter"
+                            labelColor="#fff"
+                            icon={<VerifiedUser/>}
+                        />
+                    </Paper>
+                </div>
+                <Footer/>
             </div>
         );
     }
