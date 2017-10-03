@@ -16,6 +16,9 @@
     "verbose": true,
     "testResultsProcessor": "./node_modules/jest-bamboo-formatter"
   },
+  "engines": {
+    "node": "6.10.2"
+  },
   "private": true,
   "dependencies": {
     "classnames": "2.2.5",
