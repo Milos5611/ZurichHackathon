@@ -7,9 +7,10 @@
     "url": "git@github.com:Milos5611/ZurichHackathon.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack-dev-server.config.js --hot --progress --inline --colors",
+    "dev": "webpack-dev-server --config webpack-dev-server.config.js --hot --progress --inline --colors",
     "build": "webpack --config webpack-production.config.js --progress --colors --display-error-details",
-    "test": "jest"
+    "postinstall": "npm run build",
+    "start": "node server.js"
   },
   "jest": {
     "verbose": true,
