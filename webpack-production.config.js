@@ -44,7 +44,7 @@ const config = {
         }),
         // Transfer Files
         new TransferWebpackPlugin([
-            { from: "www/images", to: "images" },
+            { from: "www" },
         ], path.resolve(__dirname, "src")),
         // Extract sass then postcss to css
         new ExtractTextPlugin({
