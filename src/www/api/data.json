@@ -2,18 +2,22 @@
   "data": {
     "templates": [
       {
+        "id": "0",
         "name": "Send Letter",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. "
       },
       {
+        "id": "1",
         "name": "Fast cash out",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. "
       },
       {
+        "id": "2",
         "name": "Smart contract",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. "
       },
       {
+        "id": "3",
         "name": "Go to court",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec mattis pretium massa. Aliquam erat volutpat. "
       }

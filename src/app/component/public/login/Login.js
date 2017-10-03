@@ -20,7 +20,7 @@ const style = {
         width: "100%"
     },
     button: {
-        backgroundColor: "#A0C52A",
+        backgroundColor: "rgb(0, 188, 212)",
         width: 240,
         height: 57,
         boxShadow: "none"

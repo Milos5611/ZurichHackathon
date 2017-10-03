@@ -1,12 +1,10 @@
 export const HOME = "/";
 export const REGISTRATION = "/registration";
 export const TEMPLATES = "/templates";
-export const SURVEYS = "/surveys";
-export const SURVEY_RUNNER = "/surveyRunner";
-export const SURVEY_INSTANCE_LIST = "/surveys/:surveyGid/instances";
-export const USERS = "/users";
-export const surveyInstances = ( surveyGid ) => {
-    return "/surveys/" + surveyGid + "/instances";
+export const LETTER = "/templates/:id/letter";
+export const CACHE = "/templates/:id/cache";
+export const surveyInstances = ( id ) => {
+    return "/templates/" + id + "/detail";
 };
 
 export const DEFAULT_LOGGED_IN = HOME;

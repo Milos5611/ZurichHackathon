@@ -10,3 +10,25 @@
 
   }
 }
+
+.details {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 20px auto;
+}
+
+.up-contract {
+  display: flex;
+  position: relative;
+
+  label {
+    align-self: center;
+    position: absolute !important;
+    right: 0;
+    background-color: rgba(153, 153, 153, 02) !important;
+    color: white !important;
+  }
+}

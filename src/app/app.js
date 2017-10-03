@@ -12,6 +12,8 @@ import Notification from "./container/Notification";
 import { Provider } from "react-redux";
 import React from "react";
 import Template from "./container/Template";
+import TemplateCache from "./container/TemplateCache";
+import TemplateLetter from "./container/TemplateLetter";
 import { addLocaleData } from "react-intl";
 import de from "react-intl/locale-data/de";
 import domready from "domready";
@@ -40,6 +42,16 @@ const MainApplication = () => {
                                 exact
                                 path={ROUTES.TEMPLATES}
                                 component={Template}
+                            />
+                            <AuthRoute
+                                exact
+                                path={ROUTES.LETTER}
+                                component={TemplateLetter}
+                            />
+                            <AuthRoute
+                                exact
+                                path={ROUTES.CACHE}
+                                component={TemplateCache}
                             />
                             <AnonRoute
                                 path={ROUTES.HOME}

@@ -1,4 +1,5 @@
 import { Card, CardHeader, CardText } from "material-ui";
+import { Link } from "react-router-dom";
 import Proptypes from "prop-types";
 import React from "react";
 import uuid from "uuid";
@@ -30,13 +31,17 @@ class Templates extends React.Component {
                                 className="template-card"
                                 key={uuid.v4()}
                             >
-                                <CardHeader
-                                    title={card.name}
-                                    subtitle={card.name}
-                                />
-                                <CardText>
-                                    {card.description}
-                                </CardText>
+                                <Link
+                                    to={"/templates/" + card.id + (card.id === "1" ? "/cache" : card.id === 2 ? "/contract" : card.id === "3" ? "/court" : "/letter")}
+                                >
+                                    <CardHeader
+                                        title={card.name}
+                                        subtitle={card.name}
+                                    />
+                                    <CardText>
+                                        {card.description}
+                                    </CardText>
+                                </Link>
                             </Card>
                         );
                     })
